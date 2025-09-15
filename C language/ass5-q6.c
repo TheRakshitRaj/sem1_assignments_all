@@ -3,7 +3,7 @@
 int main() {
     int n;
     printf("Enter n: ");
-    scanf("%d", &n);
+    scanf("%d", & n);
 
     if (n > 26) {
         printf("Please enter n ≤ 26\n");

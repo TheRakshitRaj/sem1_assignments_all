@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    /* *{
+        margin-right:  40px;
+        margin-left: 40px;
+    } */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+     
+    }
+    .searchbar{
+        margin-bottom: 5px;
+    }
+   .searchbar input{
+    width: 90%;
+    height: 40px;
+    border-radius: 15px;
+    margin: 10px;
+   }
+   .searchbar ::placeholder{
+    padding: 10px;
+    
+   }
+    .header .location {
+      color: #007bff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+     .header .user {
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+
+
+    .partners {
+      background: #0050d5;
+      padding: 50px;
+      text-align: center;
+      color: white;
+      border-radius: 10px ;
+      margin-top: 5px;
+    }
+    .partners h2 {
+      margin-bottom: 20px;
+    }
+    .partners img {
+      height: 50px;
+      margin: 0 15px;
+      background: white;
+      padding: 8px;
+      border-radius: 10px;
+    }
+
+
+    .categories {
+      display: flex;
+      overflow-x: auto;
+      background: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      margin-left: 0px;
+    }
+    .category {
+      min-width: 120px;
+      background: #0050d5;
+      
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      padding: 10px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .category small {
+      display: block;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+      .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+    }
+    .product img {
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .discount {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: green;
+      color: white;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .product h4 {
+      margin: 10px 0 5px;
+      font-size: 14px;
+    }
+    .product p {
+      font-size: 12px;
+      color: gray;
+    }
+    .price {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+    .price span {
+      text-decoration: line-through;
+      color: gray;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+    .add-btn {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 6px 12px;
+      background: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+</style>
+
+<body>
+    
+  <div class="header">
+    <div class="location">𖥔 Add your location</div>
+     <div class="user">👤</div>
+  </div>
+  
+  <div class="searchbar">
+    <input type="text" placeholder="Search for 'Bedsheet'">
+  </div>
+
+  <div class="partners">
+    <h2>Payment Partners</h2>
+    <img src="https://4.bp.blogspot.com/-P5BiFJK-kL0/VKGZKc9UkTI/AAAAAAAAH7Y/jOwrZaTRRU0/s1600/Logo+Axis_Bank.png" alt="Axis">
+    <img src="https://logos-world.net/wp-content/uploads/2021/02/HSBC-Logo.png" alt="HSBC">
+
+    <img src="https://static.vecteezy.com/system/resources/previews/019/906/766/non_2x/rbl-letter-logo-design-on-white-background-rbl-creative-circle-letter-logo-concept-rbl-letter-design-vector.jpg" alt="RBL">
+
+    <img src="https://pngimg.com/uploads/credit_card/credit_card_PNG24.png" alt="Card">
+
+  
+  <div class="partners">
+
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/19/a03e3e9c-e8e3-49a1-8c1a-cc8070b54646_Freshcorner.png"  alt="Fresh corners">
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/19/46993b49-52ab-4b68-aa11-3726b0acf486_Indulgencecorner.png" alt="Indoulegence">
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/21/d4b9e261-1b04-44bb-8dac-d14a6a47884e_Mobileselectronics.png" alt="Mobile & electronics">
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/25/190927a6-75f9-4bb8-b249-a02eac92fe25_Cetaphil1.png" alt="cetaphil">
+
+     <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/20/79ff0a53-74d4-4b7a-83e1-fb2c0ebb20d6_Groceryessentials.png"  alt="Monthly grocieries">
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/21/2a7dc59d-a232-422f-9b53-943ca2d72a21_d65afeae475e4bb5bd4f1f8da9d60503Homekitchen.png" alt="Home & kitchen">
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/20/e1831153-c99d-47ab-8cc0-6a6a671b18cb_c3new20.png" alt="Personal care 7 beauty">
+
+
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/20/79ff0a53-74d4-4b7a-83e1-fb2c0ebb20d6_Groceryessentials.png"  alt="Monthly grocieries">
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/21/2a7dc59d-a232-422f-9b53-943ca2d72a21_d65afeae475e4bb5bd4f1f8da9d60503Homekitchen.png" alt="Home & kitchen">
+    <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_164/MERCHANDISING_BANNERS/IMAGES/MERCH/2025/9/20/e1831153-c99d-47ab-8cc0-6a6a671b18cb_c3new20.png" alt="Personal care 7 beauty">
+  
+
+</div>
+
+  </div>
+   <div class="products">
+
+    <div class="product">
+      <div class="discount">15% OFF</div>
+      <img src="https://toppng.com/uploads/preview/coca-cola-logo-transparent-background-11659434498fh7nu1sate.png" alt="Coca Cola">
+      <h4>Coca-Cola Zero Soft Drink Can</h4>
+      <p>300 ml</p>
+      <div class="price">₹34 <span>₹40</span></div>
+      <div class="add-btn">+</div>
+    </div>
+
+    <div class="product">
+      <div class="discount">75% OFF</div>
+      <img src="https://static.vecteezy.com/system/resources/previews/049/953/738/non_2x/stacked-compostable-paper-containers-isolated-transparent-background-png.png" alt="Bag">
+      <h4>Jamfro Transparent Multi Reusable</h4>
+      <p>1 pack</p>
+      <div class="price">₹49 <span>₹199</span></div>
+      <div class="add-btn">+</div>
+    </div>
+
+    <div class="product">
+      <div class="discount">75% OFF</div>
+      <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/8/11/f5806b27-a185-462e-a4cf-42ba259c61df_298687.png" alt="Bag">
+      <h4>OPPO K13x | 6GB RAM & 128 GB ROM</h4>
+      <p>1 unit</p>
+      <div class="price">₹11999 <span>₹16999</span></div>
+      <div class="add-btn">+</div>
+    </div>
+
+    <div class="product">
+      <div class="discount">65% OFF</div>
+      <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2025/6/12/442267da-bd06-4b30-bfc6-628434033fdc_279239_1.png" alt="Bag">
+      <h4>Dubstep Buzz X9</h4>
+      <p>1 unit</p>
+      <div class="price">₹300 <span>₹5999</span></div>
+      <div class="add-btn">+</div>
+    </div>
+
+    <div class="product">
+      <div class="discount">65% OFF</div>
+      <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/NI_CATALOG/IMAGES/CIW/2024/12/4/fbfa5b9e-ca1d-40a8-a7da-fccc01d3508b_883960_1.png" alt="Bag">
+      <h4>Portronics Bridge Y USB to C OTG</h4>
+      <p>1 unit</p>
+      <div class="price">₹300 <span>₹5999</span></div>
+      <div class="add-btn">+</div>
+    </div>
+
+    <div class="product">
+      <div class="discount">10% OFF</div>
+      <img src="https://toppng.com/uploads/preview/royal-canin-junior-maxi-11563994876apdjceaxjg.png" alt="Dog food">
+      <h4>Royal Canin Maxi Puppy</h4>
+      <p>4 Kg</p>
+      <div class="price">₹3645 <span>₹3880</span></div>
+      <div class="add-btn">+</div>
+    </div>
+
+  </div>
+
+  <div><h4>Hot Deals</h4></div>
+
+   <div class="products">
+
+      <div class="product">
+      <div class="discount">65% OFF</div>
+      <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200/765ff374dd4023fde2d3936ec482814d" alt="Bag">
+      <h4>Onions</h4>
+      <p>1 Kg</p>
+      <div class="price">₹29 <span>₹36</span></div>
+      <div class="add-btn">+</div>
+    </div>
+
+
+   </div>
+
+
+  
+
+</body>
+</html>
